@@ -79,7 +79,7 @@ import com.ncu.model.formmodel;
 			public String createOrder(@RequestBody Map<String, Object> data) throws RazorpayException {
 			System.out.println(data);
 			int amt=Integer.parseInt(data.get("amount").toString());
-			RazorpayClient client=new RazorpayClient("rzp_test_TPGnIh1LBfeSKD","yWZZ3LhenLtvPYspDfrwmQ19");
+			RazorpayClient client=new RazorpayClient("rzpkey","your key");
 			  JSONObject orderRequest = new JSONObject();
 			  orderRequest.put("amount", amt*100); // amount in the smallest currency unit
 			  orderRequest.put("currency", "INR");
